@@ -1,6 +1,6 @@
 # WINGFLEXSIM Bridge-Software
 
-> Connective your devices and computer.
+> Connecting your WINGFLEXSIM devices and computer.
 
 Official Website: [https://wingflexsim.com/](https://wingflexsim.com/)
 
