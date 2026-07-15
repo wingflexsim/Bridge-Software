@@ -73,17 +73,33 @@ Aircraft compatibility can be complex. Some issues may be caused by third-party 
 
 Tags are managed by Wingflex staff.
 
-| Tag          | Meaning                                                             |
-| ------------ | ------------------------------------------------------------------- |
-| Need Info    | More details are needed                                             |
-| Confirmed    | The issue has been reproduced or verified                           |
-| Under Review | The report or request is being evaluated                            |
-| Planned      | Accepted for a future update                                        |
-| WIP          | Currently being worked on                                           |
-| Fixed        | Implemented or in testing                                           |
-| Released     | Included in a public release                                        |
-| Duplicate    | Already tracked elsewhere and may be deleted after 72 hours         |
+| Tag          | Meaning                                                      |
+| ------------ | ------------------------------------------------------------ |
+| Need Info    | More details are needed                                      |
+| Confirmed    | The issue has been reproduced or verified                    |
+| Under Review | The report or request is being evaluated                     |
+| Planned      | Accepted for a future update                                 |
+| WIP          | Currently being worked on                                    |
+| Fixed        | Implemented or in testing                                    |
+| Released     | Included in a public release                                 |
+| Duplicate    | Already tracked elsewhere and may be deleted after 72 hours  |
 | Not Planned  | Not planned or outside Bridge control. May be marked as “Won’t Fix” |
+
+## Priority Definitions
+
+Priority labels are assigned and updated by Wingflex staff during triage. They indicate the urgency and order in which an issue or request may be addressed. Priority is based on user impact, affected scope, reproducibility, available workarounds, technical feasibility, and roadmap fit.
+
+The examples below are illustrative. The final priority may change as more information becomes available.
+
+| Priority       | Definition                                                   | Examples                                                     |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Priority 1** | **Critical. Must be fixed as soon as possible. DO NOT USE for most issues. Can only be added by Wingflex Staff.** A core function is unavailable, a release causes a major regression, or the issue has widespread and severe user impact. | Bridge crashes on startup for most users after an update; supported Wingflex devices cannot connect or exchange simulator data; a Bridge-managed firmware update prevents normal device operation. |
+| **Priority 2** | **Important and should be addressed.** The issue has meaningful impact but lower urgency, affects a narrower group of users, or has a reasonable workaround. | Dual MCDU operation does not work while a single MCDU remains usable; an FCU or EFIS display remains active after cold and dark but can be cleared by restarting the Bridge or device; a major function is broken only for one supported aircraft or add-on version. |
+| **Priority 3** | **Valid issue or request on the backlog.** It may be promoted to Priority 2 if capacity allows, user impact increases, or the request becomes more relevant to the product roadmap. | Add compatibility support for an additional less-common aircraft or add-on; improve a device-management workflow that does not block normal operation. |
+| **Priority 4** | **Low priority.** The issue is minor, uncommon, cosmetic, or unlikely to receive active engineering work in the near term. | Minor alignment or spacing issues in the Bridge interface; a small display or LED behavior difference that does not affect operation. |
+| **Priority 5** | **Unlikely to be implemented.** The request is outside the scope of Wingflex Bridge, has poor roadmap fit, is disproportionately complex, or is likely to be marked **Not Planned** or **Won’t Fix**. | Support for an unsupported or discontinued simulator platform; behavior that a third-party aircraft does not expose through available simulator APIs. |
+
+**Priority 1 is reserved for severe, high-impact failures. A problem affecting only an unsupported aircraft, simulator, add-on, or hardware configuration will not normally qualify as Priority 1.**
 
 ## What to Include in a Bug Report
 
