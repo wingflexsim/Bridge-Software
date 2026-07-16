@@ -25,7 +25,6 @@ If the application does not start, or if Windows reports a missing runtime DLL, 
 
 No additional installation is required for Wingflex Bridge itself.
 
-
 ## What Wingflex Bridge Does
 
 Wingflex Bridge helps Wingflex hardware communicate with flight simulation software by:
@@ -54,12 +53,29 @@ Support may depend on the product, firmware version, Bridge version, simulator v
 
 Please use GitHub Issues or the Wingflex Discord forum to report Bridge Software bugs, request aircraft or add-on compatibility, or suggest Bridge features and improvements.
 
+### Bug Report Generator Required
+
+All Bridge Software bug reports must be created using the **Wingflex Bug Report Generator**:
+
+https://skylarkning.github.io/wingflex-bug-report-generator/
+
+The generator collects the required technical information and produces a consistently formatted report for faster triage, clearer communication, and easier bug indexing.
+
+After generating the report, paste the generated Markdown into either:
+
+* A new GitHub Issue in this repository, or
+* The Wingflex Discord **#bridge-bug-tracker** channel
+
+Submit each bug in **one location only**. Do not post the same report to both GitHub and Discord.
+
+**Bug reports submitted without using the generator will be deemed invalid and closed.**
+
 Discord invite:
 https://discord.com/invite/hB9faWgd3q
 
 Before posting, please search first. If the same issue or request already exists, reply there instead of creating a duplicate.
 
-This forum only applies to Bridge Software issues. If you believe your issue is hardware-related, please contact Wingflex directly.
+These reporting channels apply only to Bridge Software issues. If you believe your issue is hardware-related, please contact Wingflex directly.
 
 ## Important Notes
 
@@ -73,54 +89,45 @@ Aircraft compatibility can be complex. Some issues may be caused by third-party 
 
 Tags are managed by Wingflex staff.
 
-| Tag          | Meaning                                                      |
-| ------------ | ------------------------------------------------------------ |
-| Need Info    | More details are needed                                      |
-| Confirmed    | The issue has been reproduced or verified                    |
-| Under Review | The report or request is being evaluated                     |
-| Planned      | Accepted for a future update                                 |
-| WIP          | Currently being worked on                                    |
-| Fixed        | Implemented or in testing                                    |
-| Released     | Included in a public release                                 |
-| Duplicate    | Already tracked elsewhere and may be deleted after 72 hours  |
+| Tag          | Meaning                                                             |
+| ------------ | ------------------------------------------------------------------- |
+| Need Info    | More details are needed                                             |
+| Confirmed    | The issue has been reproduced or verified                           |
+| Under Review | The report or request is being evaluated                            |
+| Planned      | Accepted for a future update                                        |
+| WIP          | Currently being worked on                                           |
+| Fixed        | Implemented or in testing                                           |
+| Released     | Included in a public release                                        |
+| Duplicate    | Already tracked elsewhere and may be deleted after 72 hours         |
 | Not Planned  | Not planned or outside Bridge control. May be marked as “Won’t Fix” |
 
 ## Priority Definitions
 
 Priority labels are assigned and updated by Wingflex staff during triage. They indicate the urgency and order in which an issue or request may be addressed. Priority is based on user impact, affected scope, reproducibility, available workarounds, technical feasibility, and roadmap fit.
 
-The examples and estimated resolution times below are provided as general guidance only. Actual timelines may change depending on engineering capacity, technical complexity, dependencies, simulator or aircraft updates, and changes to the Wingflex development roadmap. The estimated timeline begins after an issue has been confirmed and assigned a priority.
+The examples and estimated resolution targets below are provided as general guidance. Actual timelines may change depending on engineering capacity, technical complexity, external dependencies, simulator or aircraft updates, and changes to the Wingflex development roadmap. The estimated timeline begins after an issue has been confirmed and assigned a priority.
 
-| Priority       | Definition                                                   | Estimated Resolution Time                                    | Examples                                                     |
-| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Priority 1** | **Critical. Must be fixed as soon as possible. DO NOT USE for most issues. Can only be added by Wingflex staff.** A core function is unavailable, a release causes a major regression, or the issue has widespread and severe user impact. | **Current release cycle.** An emergency hotfix will be provided as soon as reasonably possible. | Bridge crashes on startup for most users after an update; supported Wingflex devices cannot connect or exchange simulator data; a Bridge-managed firmware update prevents normal device operation. |
-| **Priority 2** | **Important and should be addressed.** The issue has meaningful impact but lower urgency, affects a narrower group of users, or has a reasonable workaround. | **Within the next one or two version updates, typically within one to two months.** | Dual MCDU operation does not work while a single MCDU remains usable; an FCU or EFIS display remains active after cold and dark but can be cleared by restarting the Bridge or device; a major function is broken only for one supported aircraft or add-on version. |
-| **Priority 3** | **Valid issue or request on the backlog.** It may be promoted to Priority 2 if capacity allows, user impact increases, or the request becomes more relevant to the product roadmap. | **Up to six months.** | Add compatibility support for an additional less-common aircraft or add-on; improve a device-management workflow that does not block normal operation. |
-| **Priority 4** | **Low priority.** The issue is minor, uncommon, cosmetic, or unlikely to receive active engineering work in the near term. | **At least six months.** No specific release commitment is provided. | Minor alignment or spacing issues in the Bridge interface; a small display or LED behavior difference that does not affect operation. |
-| **Priority 5** | **Unlikely to be implemented.** The request is outside the scope of Wingflex Bridge, has poor roadmap fit, is disproportionately complex, or is likely to be marked **Not Planned** or **Won’t Fix**. | **No estimated resolution time.** The issue or request may not be implemented. | Support for an unsupported or discontinued simulator platform; behavior that a third-party aircraft does not expose through available simulator APIs. |
+| Priority | Definition | Estimated Resolution Target | Examples |
+| -------- | ---------- | --------------------------- | -------- |
+| **Priority 1** | **Critical. Must be fixed as soon as possible. Do not use for most issues. Priority 1 can only be assigned by Wingflex staff.** A core function is unavailable, a release causes a major regression, or the issue has widespread and severe user impact. | **Current release cycle.** A hotfix will be provided as soon as reasonably possible. | Bridge crashes on startup for most users after an update; supported Wingflex devices cannot connect or exchange simulator data; a Bridge-managed firmware update prevents normal device operation. |
+| **Priority 2** | **Important and should be addressed.** The issue has meaningful impact but lower urgency, affects a narrower group of users, or has a reasonable workaround. | **Within the next one or two version updates, typically one to two months.** | Dual MCDU operation does not work while a single MCDU remains usable; an FCU or EFIS display remains active after cold and dark but can be cleared by restarting the Bridge or device; a major function is broken only for one supported aircraft or add-on version. |
+| **Priority 3** | **Valid issue or request on the backlog.** It may be promoted to Priority 2 if capacity allows, user impact increases, or the request becomes more relevant to the product roadmap. | **Up to six months.** | Add DAP-500 compatibility for the COWS DA40 or DA42; support an additional less-common aircraft or add-on; improve a device-management workflow that does not block normal operation. |
+| **Priority 4** | **Low priority.** The issue is minor, uncommon, cosmetic, or unlikely to receive active engineering work in the near term. | **At least six months.** No specific release commitment is provided. | Minor alignment or spacing issues in the Bridge interface; a small display or LED behavior difference that does not affect operation; a typo or label inconsistency. |
+| **Priority 5** | **Unlikely to be implemented.** The request is outside the scope of Wingflex Bridge, has poor roadmap fit, is disproportionately complex, or is likely to be marked **Not Planned** or **Won’t Fix**. | **No estimated resolution time.** The issue or request may not be implemented. | Support for an unsupported or discontinued simulator platform; behavior that a third-party aircraft does not expose through available simulator APIs; a major custom integration for one-off unsupported hardware. |
 
 **Priority 1 is reserved for severe, high-impact failures. A problem affecting only an unsupported aircraft, simulator, add-on, or hardware configuration will not normally qualify as Priority 1.**
 
-**Estimated resolution times are targets rather than guarantees. Assignment of a priority does not guarantee that an issue will be resolved within the stated period or included in a particular release.**
+**Estimated resolution targets are not guarantees. Assignment of a priority does not guarantee that an issue will be resolved within the stated period or included in a particular release.**
 
 ## What to Include in a Bug Report
 
-For bugs, please include the following information:
+Use the required **Wingflex Bug Report Generator** to prepare your report:
 
-```text
-Product: DAP / FCU / EFIS / RMP / Overhead / Other
-Bridge Version:
-Firmware Version:
-Simulator: MSFS 2020 / MSFS 2024
-Aircraft/Add-on:
-Issue:
-Steps to Reproduce:
-Expected Result:
-Actual Result:
-Screenshots/Videos/Logs:
-```
+https://skylarkning.github.io/wingflex-bug-report-generator/
 
-Please provide clear steps to reproduce the issue. Screenshots, videos, and logs are very helpful when available.
+The generator will prompt you for the required product, Bridge version, firmware version, simulator, aircraft or add-on, issue description, reproduction steps, expected result, actual result, and supporting media or logs.
+
+Provide clear and repeatable steps. Attach screenshots, logs, and preferably a video showing the issue whenever available. Reports without enough information to reproduce or investigate the problem may be marked **Need Info** or closed.
 
 ## What to Include in a Feature or Compatibility Request
 
@@ -154,3 +161,4 @@ If your issue appears to be related to hardware damage, shipping damage, physica
 Wingflex Bridge compatibility depends on simulator APIs, aircraft implementations, add-on behavior, firmware versions, and software updates. Some behaviors may be outside Wingflex’s direct control.
 
 Wingflex will review reports and requests, but not every request can be accepted or implemented.
+
