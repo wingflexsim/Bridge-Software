@@ -53,22 +53,22 @@ Support may depend on the product, firmware version, Bridge version, simulator v
 
 Please use GitHub Issues or the Wingflex Discord forum to report Bridge Software bugs, request aircraft or add-on compatibility, or suggest Bridge features and improvements.
 
-### Bug Report Generator Required
+### Issue Form Required
 
-All Bridge Software bug reports must be created using the **Wingflex Bug Report Generator**:
+All Bridge Software bug reports and feature or compatibility requests must be created using the appropriate **GitHub Issue Form**:
 
-https://skylarkning.github.io/wingflex-bug-report-generator/
+https://github.com/wingflexsim/Bridge-Software/issues/new/choose
 
-The generator collects the required technical information and produces a consistently formatted report for faster triage, clearer communication, and easier bug indexing.
+The forms collect the required technical information directly on GitHub and produce a consistently formatted report for faster triage, clearer communication, and easier bug indexing.
 
-After generating the report, paste the generated Markdown into either:
+Submit the completed report in either:
 
-* A new GitHub Issue in this repository, or
+* A new GitHub Issue in this repository using the appropriate form, or
 * The Wingflex Discord **#bridge-bug-tracker** channel
 
 Submit each bug in **one location only**. Do not post the same report to both GitHub and Discord.
 
-**Bug reports submitted without using the generator will be deemed invalid and closed.**
+**GitHub reports submitted without using the appropriate Issue Form may be deemed invalid and closed.**
 
 Discord invite:
 https://discord.com/invite/hB9faWgd3q
@@ -121,26 +121,19 @@ The examples and estimated resolution targets below are provided as general guid
 
 ## What to Include in a Bug Report
 
-Use the required **Wingflex Bug Report Generator** to prepare your report:
+Use the required **Bug Report Issue Form** to prepare your report:
 
-https://skylarkning.github.io/wingflex-bug-report-generator/
+https://github.com/wingflexsim/Bridge-Software/issues/new?template=01-bug-report.yml
 
-The generator will prompt you for the required product, Bridge version, firmware version, simulator, aircraft or add-on, issue description, reproduction steps, expected result, actual result, and supporting media or logs.
+The form prompts you for the required product, Bridge version, firmware version, simulator, aircraft or add-on, issue description, reproduction steps, expected result, actual result, and supporting media or logs.
 
 Provide clear and repeatable steps. Attach screenshots, logs, and preferably a video showing the issue whenever available. Reports without enough information to reproduce or investigate the problem may be marked **Need Info** or closed.
 
 ## What to Include in a Feature or Compatibility Request
 
-For feature requests or aircraft/add-on compatibility requests, please include:
+Use the **Feature or Compatibility Request Issue Form**:
 
-```text
-Request:
-Affected Product:
-Simulator/Aircraft:
-Use Case:
-Expected Behavior:
-References:
-```
+https://github.com/wingflexsim/Bridge-Software/issues/new?template=02-feature-or-compatibility-request.yml
 
 Please explain what you are trying to achieve and how the requested feature or compatibility improvement would help.
 

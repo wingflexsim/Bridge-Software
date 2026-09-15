@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Wingflex Discord community
+    url: https://discord.com/invite/hB9faWgd3q
+    about: Ask usage questions and get community help. Please do not duplicate a GitHub report on Discord.
+  - name: Wingflex hardware support
+    url: https://wingflexsim.com/
+    about: Contact Wingflex for hardware damage, shipping, buttons, connectors, power, displays, or cable problems.

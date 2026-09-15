@@ -1,0 +1,161 @@
+name: Feature or compatibility request / 功能或兼容性请求
+description: Suggest a Bridge feature or request aircraft/add-on compatibility.
+title: "[Request] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to suggest a Wingflex Bridge feature or request support for an aircraft or add-on. Please keep one request per issue.
+
+        请使用此表单提出 Bridge 功能建议，或申请机型/插件兼容性支持。每个 Issue 只提交一个请求。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting / 提交前确认
+      options:
+        - label: I searched the existing issues and did not find the same request. / 我已搜索现有 Issue，未发现相同请求。
+          required: true
+        - label: This request concerns Wingflex Bridge software. / 此请求与 Wingflex Bridge 软件有关。
+          required: true
+
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Request type / 请求类型
+      options:
+        - New Bridge feature or improvement
+        - Aircraft or add-on compatibility
+        - Simulator compatibility
+        - Device support or integration
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product / 产品
+      options:
+        - FCU Cube
+        - RMP Cube
+        - EFIS Cube
+        - Combo Cube (EFIS+FCU+RMP)
+        - A320 CDU
+        - 737 CDU/FMC
+        - 777 CDU/FMC
+        - A320 Overhead Panel
+        - DP320 (Flight Display)
+        - GMP (Gear Management Panel)
+        - DAP-500
+        - ECP (ECAM Control Panel)
+        - A3N Tiller
+        - All / Not product-specific
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: other-product
+    attributes:
+      label: Other product / 其他产品
+      description: Complete this only if you selected “Other” above.
+      placeholder: Product name and model
+
+  - type: input
+    id: bridge-version
+    attributes:
+      label: Bridge version / Bridge 版本
+      description: Enter the version you currently use, or N/A for a new integration.
+      placeholder: "Example: V3.0.0.1-Hotfix"
+    validations:
+      required: true
+
+  - type: input
+    id: firmware-version
+    attributes:
+      label: Firmware version / 固件版本
+      placeholder: Exact version, Latest, Unknown, or N/A
+    validations:
+      required: true
+
+  - type: input
+    id: simulator
+    attributes:
+      label: Simulator / 模拟器
+      placeholder: "Example: MSFS 2024, X-Plane 12, or N/A"
+    validations:
+      required: true
+
+  - type: input
+    id: aircraft
+    attributes:
+      label: Aircraft or add-on / 机型或插件
+      placeholder: Name and version, or N/A
+    validations:
+      required: true
+
+  - type: input
+    id: developer-website
+    attributes:
+      label: Aircraft/add-on developer website / 开发者网站
+      description: Required for aircraft or add-on compatibility requests; otherwise enter N/A.
+      placeholder: https://developer.example.com/product
+    validations:
+      required: true
+
+  - type: textarea
+    id: requested-support
+    attributes:
+      label: Requested feature or compatibility / 所需功能或兼容性
+      description: Describe the feature, supported behavior, or integration you are requesting and why it is needed.
+      placeholder: What should Wingflex Bridge support or improve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-workflow
+    attributes:
+      label: Current workflow or limitation / 当前流程或限制
+      description: Explain how users currently accomplish the task and where the limitation appears.
+      placeholder: Describe the current steps and limitation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-result
+    attributes:
+      label: Desired result / 期望结果
+      placeholder: Describe how the requested support should work.
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-result
+    attributes:
+      label: Current result or status / 当前结果或状态
+      placeholder: Describe the current behavior or compatibility status.
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Current workaround / 当前替代方案
+      placeholder: Describe the workaround, or write “No workaround.”
+    validations:
+      required: true
+
+  - type: textarea
+    id: supporting-material
+    attributes:
+      label: Supporting material or documentation / 支持材料或文档
+      description: Paste documentation, screenshots, videos, SDK information, or other useful references.
+      placeholder: Drag files here or paste links.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context / 其他信息
+      placeholder: Add use cases, demand, developer contact details, or any other useful information.
+

@@ -1,0 +1,236 @@
+name: Bug report / Bug 报告
+description: Report a reproducible problem with Wingflex Bridge software.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve Wingflex Bridge. Please complete every required field so the team can reproduce and investigate the problem.
+
+        请填写所有必填项，以便我们复现并调查问题。硬件损坏、运输、线缆或供电问题请直接联系 Wingflex 客服。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting / 提交前确认
+      description: Please search existing issues first and submit each bug in one location only.
+      options:
+        - label: I searched the existing issues and did not find a duplicate. / 我已搜索现有 Issue，未发现重复报告。
+          required: true
+        - label: This report is about Wingflex Bridge software, not a hardware, shipping, cable, or power problem. / 此报告与 Bridge 软件有关，并非硬件、运输、线缆或供电问题。
+          required: true
+        - label: I will submit this bug in one location only (GitHub or the Wingflex community). / 我只会在一个渠道提交此问题。
+          required: true
+
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product / 产品
+      options:
+        - FCU Cube
+        - RMP Cube
+        - EFIS Cube
+        - Combo Cube (EFIS+FCU+RMP)
+        - A320 CDU
+        - 737 CDU/FMC
+        - 777 CDU/FMC
+        - A320 Overhead Panel
+        - DP320 (Flight Display)
+        - GMP (Gear Management Panel)
+        - DAP-500
+        - ECP (ECAM Control Panel)
+        - A3N Tiller
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: other-product
+    attributes:
+      label: Other product / 其他产品
+      description: Complete this only if you selected “Other” above.
+      placeholder: Product name and model
+
+  - type: input
+    id: bridge-version
+    attributes:
+      label: Bridge version / Bridge 版本
+      placeholder: "Example: V3.0.0.1-Hotfix"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: firmware-version
+    attributes:
+      label: Firmware version / 固件版本
+      options:
+        - N/A
+        - Latest firmware
+        - Firmware upgraded, but issue persists
+        - Unknown
+        - Other version
+    validations:
+      required: true
+
+  - type: input
+    id: other-firmware-version
+    attributes:
+      label: Exact firmware version / 具体固件版本
+      description: Complete this when a version number is known or you selected “Other version.”
+      placeholder: Firmware version
+
+  - type: dropdown
+    id: simulator
+    attributes:
+      label: Simulator / 模拟器
+      options:
+        - MSFS 2020
+        - MSFS 2024
+        - MSFS 2020 / MSFS 2024
+        - X-Plane 11
+        - X-Plane 12
+        - Prepar3D
+        - N/A
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: other-simulator
+    attributes:
+      label: Other simulator / 其他模拟器
+      description: Complete this only if you selected “Other” above.
+      placeholder: Simulator and version
+
+  - type: dropdown
+    id: aircraft
+    attributes:
+      label: Aircraft or add-on / 机型或插件
+      options:
+        - Default / Stock Aircraft
+        - Fenix A319 / A320 / A321
+        - FlyByWire A320neo / A32NX
+        - iniBuilds A300
+        - iniBuilds A310
+        - iniBuilds A320neo
+        - iniBuilds A330
+        - iniBuilds A340
+        - iniBuilds A350
+        - FSLabs A320 Family
+        - FSLabs A321neo
+        - Aerosoft A330
+        - Aerosoft A340-600 Pro
+        - ToLiss A319
+        - ToLiss A320neo
+        - ToLiss A321
+        - ToLiss A330
+        - FlightFactor A320 Ultimate
+        - PMDG 737
+        - PMDG 747
+        - PMDG 777
+        - iFly 737 MAX
+        - iFly 737 NG
+        - Zibo 737-800X
+        - FlightFactor 757
+        - FlightFactor 767
+        - FlightFactor 777
+        - Rotate MD-11
+        - COWS DA40
+        - COWS DA42
+        - COWS DA40 / DA42
+        - Black Square Analog Series
+        - Black Square Duke
+        - FlightFX Vision Jet
+        - HondaJet / HJet
+        - Working Title CJ4
+        - Working Title G1000 NXi Aircraft
+        - Working Title G3000 Aircraft
+        - Hot Start Challenger 650
+        - FlightSim Studio E-Jets
+        - X-Crafts E-Jets
+        - FlightFactor A350
+        - Rotate MD-80
+        - Leonardo Fly the Maddog X
+        - BAE 146 Professional
+        - Just Flight F28 Professional
+        - Just Flight RJ Professional
+        - ATR 42 / 72
+        - N/A
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: other-aircraft
+    attributes:
+      label: Other aircraft or add-on / 其他机型或插件
+      description: Complete this only if you selected “Other” above.
+      placeholder: Aircraft or add-on name and version
+
+  - type: input
+    id: system-specifications
+    attributes:
+      label: System specifications / 电脑配置
+      description: Optional, but useful for crashes, performance, USB, or connection problems.
+      placeholder: "Example: Windows 11, Ryzen 7 7800X3D, RX 9700 XT, 32 GB DDR5"
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: Issue / 问题描述
+      description: Describe what happens, when it happens, and which functions are affected.
+      placeholder: Include any error messages and whether this worked in an earlier Bridge, firmware, simulator, or aircraft version.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      placeholder: |
+        1. Launch the simulator.
+        2. Load the affected aircraft.
+        3. Open Wingflex Bridge.
+        4. Connect the device.
+        5. Perform the affected action.
+        6. Observe the result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: Expected result / 预期结果
+      placeholder: Describe what should happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-result
+    attributes:
+      label: Actual result / 实际结果
+      placeholder: Describe what actually happens.
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround / 临时解决方法
+      placeholder: State the workaround, or write “No confirmed workaround.”
+    validations:
+      required: true
+
+  - type: textarea
+    id: supporting-evidence
+    attributes:
+      label: Logs, screenshots, or video / 日志、截图或视频
+      description: Drag files into this box or paste links. A short video is preferred when available.
+      placeholder: Attach files or paste links here.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context / 其他信息
+      placeholder: Add confirmations, regression details, reference versions, or anything else that may help.
+
